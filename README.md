@@ -1,1 +1,1 @@
-# cpt-307
+# CS307 Systems Programming in Rust
