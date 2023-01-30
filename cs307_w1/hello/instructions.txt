@@ -1,3 +1,0 @@
-$ cargo new hello
-$ cd hello
-$ cargo run
