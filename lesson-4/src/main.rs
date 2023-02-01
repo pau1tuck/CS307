@@ -100,3 +100,10 @@ fn for_with_array() {
 }
 /* The safety and conciseness of for loops make them the most commonly used loop construct in Rust.
 Even in situations in which you want to run some code a certain number of times, as in while_with_array, most Rustaceans would use a for loop.  */
+
+fn reverse_for_loop {
+    for number in (1..4).rev() { // rev() method
+        println!("{number}!");
+    }
+    println!("LIFT OFF!!!");
+}
