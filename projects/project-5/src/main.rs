@@ -1,22 +1,17 @@
-extern crate dotenv;
-use dotenv::dotenv;
 use reqwest::Client;
-use serde::Deserialize;
-use std::env;
+use serde_json::{Value};
+use mini_redis::{client, Result};
 
-#[derive(Debug, Deserialize)]
-struct Weather {
-    temperature: String,
+async fn get_json(url: &str) -> Result<Value, Box<dyn std::error::Error>> {
+    let reqwest_client = Client::new();
+    let response = reqwest_client.get(url).send().await?.json().await?;
+    Ok(response)
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
-    dotenv().ok(); // This line loads the environment variables from the ".env" file.
-    let api_key = std::env::var("API_KEY").expect("API_KEY must be defined.");
-    let address = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Mae%20Chan?unitGroup=metric&include=current&key=" + api_key + "&contentType=json";
-
-    let client = Client::new();
-    let response = client.get(address).send()?.json::<Weather>()?;
-
-    println!("{:?}", response);
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut client = client::connect("127.0.0.1:6379").await?;
+    let json = get_json("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Mae%20Chan?unitGroup=metric&include=current&key=ASRQL55QSXYKL63Y2DCEMFUC3&contentType=json").await?;
+    println!("{:?}", json);
     Ok(())
 }
