@@ -53,7 +53,7 @@ fn nested_loops() {
         loop {
             println!("remaining = {remaining}");
             if remaining == 9 {
-                break;
+                break; // Exits the inner loop only
             }
             if count == 2 {
                 break 'counting_up;
@@ -65,3 +65,38 @@ fn nested_loops() {
     }
     println!("End count = {count}");
 }
+
+fn while_loop() {
+    // Eliminates the need for unnecessary nested loops
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFT OFF!!!");
+}
+
+fn while_with_array() {
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("The value is: {}", a[index]); // Access the array indices with a[index]
+
+        index += 1;
+    }
+}
+
+// A safer and more efficient method:
+fn for_with_array() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("The value is: {element}");
+    }
+}
+/* The safety and conciseness of for loops make them the most commonly used loop construct in Rust.
+Even in situations in which you want to run some code a certain number of times, as in while_with_array, most Rustaceans would use a for loop.  */
