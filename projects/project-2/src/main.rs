@@ -20,6 +20,6 @@ fn main() {
     // Error! The type of a variable can't be changed.
     mutable = true;
 
-    // Variables can be overwritten with shadowing (i.e. 'let')
+    // Variables can be overwritten with shadowing (i.e. 'let') to change the type.
     let mutable = true;
 }
