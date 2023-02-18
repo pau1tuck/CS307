@@ -1,0 +1,8 @@
+CS307 Systems Programming with Rust
+
+1. Introduction
+2. Types and Type Inference
+3. Display, Debug, and Mutability
+4. Stack, Heap, and Pointers
+5. Strings, const, and static
+6. References
