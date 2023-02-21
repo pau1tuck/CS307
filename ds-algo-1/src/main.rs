@@ -17,9 +17,9 @@ impl Person {
 
 fn main() {
     let person = Person {
-        name: "Paul",
+        name: "Paul".to_string(),
         age: 39,
         children: 1,
     };
-    printl!("Hello, World!"); // deliberate error to test rust-analyzer
+    println!("Hello, World!"); // deliberate error to test rust-analyzer
 }
