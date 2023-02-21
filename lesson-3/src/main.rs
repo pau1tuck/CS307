@@ -16,7 +16,7 @@ fn main() {
 
     println!("The value of y is: {y}");
 
-    let x = plus_one(5);
+    let x = add_one(5);
     println!("The value of x is: {x}");
 }
 
@@ -29,7 +29,7 @@ fn another_function() {
 // In function signatures, you must declare the type of each parameter.
 fn yet_another_function(x: i32, unit: char) {
     println!("The value of x is: {x}");
-    println!("The measurement is: {x}{unit_label}");
+    println!("The measurement is: {x}{unit}");
 }
 
 // Functions can return values to the code that calls them.

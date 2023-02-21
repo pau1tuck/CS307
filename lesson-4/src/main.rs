@@ -7,7 +7,7 @@ fn main() {
     if number < 5 {
         println!("Condition is true");
     } else if number % 2 == 0 {
-        println!("Number is divisible by 2");
+        println!("'number' is divisible by 2");
     } else {
         println!("Condition is false");
     }
@@ -26,7 +26,7 @@ fn infinite_loop() {
     loop {
         println!("again!");
     }
-    // continue / break
+    // Use 'continue' or 'break'
 }
 
 fn looping_counter() {
