@@ -19,7 +19,7 @@ fn mismatch() {
 
     let number = if condition { 5 } else { "six" };
 
-    println!("The value of number is: {number}");
+    println!("The value of 'number' is: {number}");
 }
 
 fn infinite_loop() {
