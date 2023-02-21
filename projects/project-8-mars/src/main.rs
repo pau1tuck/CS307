@@ -1,3 +1,5 @@
+// 6. Mutability
+
 fn main() {
     println!("Number: {}, String: {}", 100, "abcde"); // `println!()` is a macro that can receive a variable number of arguments.
                                                       // To learn more: `cargo install cargo-expand`, then `run cargo expand`.
