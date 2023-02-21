@@ -1,4 +1,4 @@
-// Udemy 1.3
+// Udemy 1.3s
 
 pub struct Person {
     name: String, // String is a pointer
@@ -8,15 +8,19 @@ pub struct Person {
 
 impl Person {
     pub fn print(self) -> String {
+        let mut sp = "children";
+        if self.children == 1 {
+            sp = "child";
+        }
         format!(
-            "Name: {}, age: {} has {} children.",
-            self.name, self.age, self.children
+            "Name: {}, age: {} has {} {}.",
+            self.name, self.age, self.children, sp
         )
     }
 }
 
 fn main() {
-    let person = Person {
+    let _person = Person {
         name: "Paul".to_string(),
         age: 39,
         children: 1,
