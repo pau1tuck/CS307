@@ -10,7 +10,7 @@ fn main() {
     let y = {
         let z = 3;
         // Expressions do not include ending semicolons.
-        // If you add a semicolon to the end of an expression, you turn it into a statement, and it will then not return a value.
+        // If you add a semicolon to the end of an expression, you turn it into a statement, and the function will fail to return a value.
         z + 1
     };
 
