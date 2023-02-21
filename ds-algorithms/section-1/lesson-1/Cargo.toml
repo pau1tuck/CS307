@@ -1,7 +1,5 @@
-# This is your project manifest file.
-
 [package]
-name = "project-8-mars"
+name = "lesson-1"
 version = "0.1.0"
 edition = "2021"
 
