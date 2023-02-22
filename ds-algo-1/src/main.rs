@@ -20,10 +20,11 @@ impl Person {
 }
 
 fn main() {
-    let _person = Person {
+    let p = Person {
         name: "Paul".to_string(),
         age: 39,
         children: 1,
     };
     println!("Hello, World!"); // deliberate error to test rust-analyzer
+    println!("{}", p.print());
 }
