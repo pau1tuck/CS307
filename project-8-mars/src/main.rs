@@ -1,14 +1,15 @@
 use std::io;
 
 fn main() {
-    println!("Number: {}, String: {}", 100, "abcde"); // `println!()` is a macro that can receive a variable number of arguments.
-                                                      // To learn more: `cargo install cargo-expand`, then `run cargo expand`.
+    // `println!()` is a macro that can receive a variable number of arguments.
+    // To learn more: `cargo install cargo-expand`, then `run cargo expand`.
+    println!("Number: {}, String: {}", 100, "abcde");
 
     let mut input = String::new();
     // The `mut` keyword makes our new variable mutable (changeable).
     // The `input` variable is the owner of our `String` [1].
     // The `String` lives on the heap, because its size is not known at compile time.
-    // The stack contains a pointer to the String and some additional metadata.
+    // The stack contains a pointer to the `String` and some additional metadata.
 
     io::stdin().read_line(&mut input);
     println!("Input: {}", input);
