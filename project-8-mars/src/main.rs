@@ -1,3 +1,5 @@
+// source
+
 use std::io;
 
 fn main() {
@@ -23,7 +25,7 @@ fn main() {
 fn calculate_weight_on_mars(weight: f32) -> f32 {
     (weight / 9.81) * 3.711 // Don't add a semicolon to your return expression!
 }
-
+/* THREE RULES OF OWNERSHIP: */
 // 1. Each value in Rust is owned by a variable.
 // 2. When the owner goes out of scope, the value will be deallocated. (see RAII in C++)
 // 3. There can only be ONE owner at a time.
