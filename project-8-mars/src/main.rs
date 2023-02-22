@@ -1,11 +1,11 @@
-// source
+// Command Line Application 10
 
 use std::io;
 
 fn main() {
     // `println!()` is a macro that can receive a variable number of arguments.
     // To learn more: `cargo install cargo-expand`, then `run cargo expand`.
-    println!("Number: {}, String: {}", 100, "abcde");
+    println!("Enter your weight: (kg): ");
 
     let mut input = String::new();
     // The `mut` keyword makes our new variable mutable (changeable).
@@ -13,7 +13,7 @@ fn main() {
     // The `String` lives on the heap, because its size is not known at compile time.
     // The stack contains a pointer to the `String` and some additional metadata.
 
-    io::stdin().read_line(&mut input);
+    io::stdin().read_line(&mut input).unwrap();
     println!("Input: {}", input);
     let mut mars_weight: f32 = calculate_weight_on_mars(90.0); // Compiler infers `weight: f32` from the function argument.
     println!(
